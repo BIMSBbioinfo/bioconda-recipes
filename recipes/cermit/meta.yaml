@@ -1,0 +1,33 @@
+package:
+  name: cermit
+  version: "1.2"
+
+source:
+  fn: cERMITv1.2.tar.gz
+  url: https://ohlerlab.mdc-berlin.de/files/cERMIT/cERMITv1.2.tar.gz
+  md5: 1c48e718ae55735d2a8eaae7c637acaa
+
+build:
+  skip: True  # [not linux]
+  number: 0
+
+requirements:
+  build:
+
+  run:
+    - r-base
+    - ruby
+
+test:
+  commands:
+    - run_all
+
+about:
+  home: https://ohlerlab.mdc-berlin.de/files/cERMIT/cERMITv1.2.tar.gz
+  license: GPL
+  summary: 'cERMIT operates on a set of putative regulatory regions
+  and their corresponding evidence, for example sequence peaks from
+  ChIP-seq experiments. Candidates for co-regulated sets of regions are
+  defined by the presence of a shared degenrate k-mer motif.
+  cERMIT identifies the motifs that correspond to the candidate sets
+  with strong aggregate binding evidence.'

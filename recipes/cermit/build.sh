@@ -51,6 +51,7 @@ chmod +x $generate_filelist_files
 
 cERMIT_params=$PKG_HOME'/cermit_params'
 echo 'cp '$params' .' > $cERMIT_params
+echo 'echo "generated parameter template: io.params"' >> $cERMIT_params
 chmod +x $cERMIT_params
 
 ln -s $run_all $PKG_bin/run_cermit

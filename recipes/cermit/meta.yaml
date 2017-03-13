@@ -20,7 +20,7 @@ requirements:
 
 test:
   commands:
-    - run_all
+    - run_cermit 2>&1  | grep params > /dev/null
 
 about:
   home: https://ohlerlab.mdc-berlin.de/files/cERMIT/cERMITv1.2.tar.gz

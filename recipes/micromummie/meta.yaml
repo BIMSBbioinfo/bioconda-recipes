@@ -17,25 +17,29 @@ requirements:
     - openmpi
     - perl-bioperl
     - perl-file-chdir
-    - gsl=1.16
+    - gsl ==1.16
     - ucsc-twobittofa
-    - bedtools=2.24
+    - bedtools ==2.24
   run:
     - ruby
     - openmpi
     - perl-bioperl
     - perl-file-chdir
-    - gsl=1.16
+    - gsl ==1.16
     - ucsc-twobittofa
-    - bedtools=2.24 
+    - bedtools ==2.24
 
 test:
   commands:
-    - microMUMMIE.pl
-    - baum-welch
+    - microMUMMIE.pl 2>&1 | grep 'microMUMMIE.pl' > /dev/null
+    - baum-welch 2>&1 | grep 'baum-welch' > /dev/null
 
 about:
   home: https://ohlerlab.mdc-berlin.de/software/microMUMMIE_99/
   license: GPL (>= 2)
   summary: 'This is a pipeline to predict micro-RNA
   binding sites using PAR-CLIP data'
+
+extra:
+  recipe-maintainers:
+    - dyusuf

@@ -1,0 +1,41 @@
+package:
+  name: micromummie
+  version: 1.0.0
+
+source:
+  fn: micromummie_without_tgs.tgz
+  url: 
+  md5: 0966493df60e1770f7ecfff5e093f641
+
+build:
+  skip: True  # [not linux]
+  number: 0
+
+requirements:
+  build:
+    - ruby
+    - openmpi
+    - perl-bioperl
+    - perl-file-chdir
+    - gsl=1.16
+    - ucsc-twobittofa
+    - bedtools=2.24
+  run:
+    - ruby
+    - openmpi
+    - perl-bioperl
+    - perl-file-chdir
+    - gsl=1.16
+    - ucsc-twobittofa
+    - bedtools=2.24 
+
+test:
+  commands:
+    - microMUMMIE.pl
+    - baum-welch
+
+about:
+  home: https://ohlerlab.mdc-berlin.de/software/microMUMMIE_99/
+  license: GPL (>= 2)
+  summary: 'This is a pipeline to predict micro-RNA
+  binding sites using PAR-CLIP data'

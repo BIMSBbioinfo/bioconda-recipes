@@ -5,11 +5,11 @@ package:
 source:
   fn: micromummie_without_tgs.tgz
   url: https://github.com/BIMSBbioinfo/bioconda-recipes/raw/micromummie/recipes/micromummie/micromummie_without_tgs.tgz
-  md5: 0966493df60e1770f7ecfff5e093f641
+  md5: f9c800b1897e979b75f9f76c24a502ad
 
 build:
   skip: True  # [not linux]
-  number: 2
+  number: 3
 
 requirements:
   build:

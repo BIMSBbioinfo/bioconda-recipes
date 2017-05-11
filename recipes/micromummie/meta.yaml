@@ -1,4 +1,4 @@
-cpackage:
+package:
   name: micromummie
   version: 1.0.0
 
@@ -21,7 +21,6 @@ requirements:
     - bedtools ==2.24
     - perl
   run:
-    - python
     - openmpi
     - perl-bioperl
     - perl-file-chdir

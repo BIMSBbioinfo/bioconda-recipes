@@ -1,4 +1,4 @@
-package:
+cpackage:
   name: micromummie
   version: 1.0.0
 
@@ -9,25 +9,26 @@ source:
 
 build:
   skip: True  # [not linux]
-  number: 0
+  number: 2
 
 requirements:
   build:
-    - ruby
     - openmpi
     - perl-bioperl
     - perl-file-chdir
     - gsl ==1.16
     - ucsc-twobittofa
     - bedtools ==2.24
+    - perl
   run:
-    - ruby
+    - python
     - openmpi
     - perl-bioperl
     - perl-file-chdir
     - gsl ==1.16
     - ucsc-twobittofa
     - bedtools ==2.24
+    - perl
 
 test:
   commands:

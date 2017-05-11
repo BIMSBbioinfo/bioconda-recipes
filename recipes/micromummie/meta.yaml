@@ -4,7 +4,7 @@ package:
 
 source:
   fn: micromummie_without_tgs.tgz
-  url: 
+  url: https://github.com/BIMSBbioinfo/bioconda-recipes/raw/micromummie/recipes/micromummie/micromummie_without_tgs.tgz
   md5: 0966493df60e1770f7ecfff5e093f641
 
 build:
